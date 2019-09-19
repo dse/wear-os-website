@@ -3157,47 +3157,89 @@ html .light-text.light-text {
       color: inherit;
       opacity: 0.5; }
 
-.watch-face-list {
-  margin-right: -0.625rem;
-  margin-left: -0.625rem; }
-  .watch-face-list > * {
+.screenshot-list {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-flow: row wrap;
+      flex-flow: row wrap;
+  -ms-flex-pack: center;
+      justify-content: center; }
+  .screenshot-list > .screenshot-list-item {
     width: calc(50% - 1.25rem);
     margin-right: 0.625rem;
     margin-left: 0.625rem; }
-  @media print, screen and (min-width: 40em) {
-    .watch-face-list {
-      margin-right: -0.9375rem;
-      margin-left: -0.9375rem; } }
-  @media screen and (min-width: 40em) and (max-width: 63.99875em) {
-    .watch-face-list > * {
-      width: calc(33.33333% - 1.875rem);
-      margin-right: 0.9375rem;
-      margin-left: 0.9375rem; } }
-  @media print, screen and (min-width: 64em) {
-    .watch-face-list > * {
-      width: calc(25% - 1.875rem);
-      margin-right: 0.9375rem;
-      margin-left: 0.9375rem; } }
-
-.watch-face-list-item {
-  margin-bottom: 1rem; }
-  .watch-face-list-item a {
-    font-family: 'Arial Black', 'Arial', 'Helvetica Neue', Helvetica, Roboto, sans-serif;
-    background-color: black;
-    color: white;
-    display: block;
-    padding: 1rem 1rem 1px 1rem;
+  .grid-x .screenshot-list {
+    margin-right: -0.625rem;
+    margin-left: -0.625rem; }
+    @media print, screen and (min-width: 40em) {
+      .grid-x .screenshot-list {
+        margin-right: -0.9375rem;
+        margin-left: -0.9375rem; } }
+  .screenshot-list > .screenshot-list-item {
     text-align: center; }
-    .watch-face-list-item a:hover, .watch-face-list-item a:focus {
+    @media screen and (min-width: 40em) and (max-width: 63.99875em) {
+      .screenshot-list > .screenshot-list-item {
+        width: calc(33.33333% - 1.875rem);
+        margin-right: 0.9375rem;
+        margin-left: 0.9375rem; } }
+    @media screen and (min-width: 64em) {
+      .screenshot-list > .screenshot-list-item {
+        width: calc(25% - 1.875rem);
+        margin-right: 0.9375rem;
+        margin-left: 0.9375rem; } }
+    .screenshot-list > .screenshot-list-item > a {
+      display: block; }
+      .screenshot-list > .screenshot-list-item > a:hover img, .screenshot-list > .screenshot-list-item > a:focus img {
+        opacity: 0.8;
+        border-radius: 50%; }
+
+.watch-face-list {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-flow: row wrap;
+      flex-flow: row wrap;
+  -ms-flex-pack: center;
+      justify-content: center; }
+  .watch-face-list > .watch-face-list-item {
+    width: calc(50% - 1.25rem);
+    margin-right: 0.625rem;
+    margin-left: 0.625rem; }
+  .grid-x .watch-face-list {
+    margin-right: -0.625rem;
+    margin-left: -0.625rem; }
+    @media print, screen and (min-width: 40em) {
+      .grid-x .watch-face-list {
+        margin-right: -0.9375rem;
+        margin-left: -0.9375rem; } }
+  .watch-face-list > .watch-face-list-item {
+    margin-bottom: 1rem; }
+    @media screen and (min-width: 40em) and (max-width: 63.99875em) {
+      .watch-face-list > .watch-face-list-item {
+        width: calc(33.33333% - 1.875rem);
+        margin-right: 0.9375rem;
+        margin-left: 0.9375rem; } }
+    @media screen and (min-width: 64em) {
+      .watch-face-list > .watch-face-list-item {
+        width: calc(25% - 1.875rem);
+        margin-right: 0.9375rem;
+        margin-left: 0.9375rem; } }
+    .watch-face-list > .watch-face-list-item a {
+      font-family: 'Arial Black', 'Arial', 'Helvetica Neue', Helvetica, Roboto, sans-serif;
+      background-color: black;
       color: white;
-      opacity: 0.8; }
-    .watch-face-list-item a small {
       display: block;
-      opacity: 0.75; }
-  .watch-face-list-item.pilot-watch-3000-watch-face a {
-    background-color: #002244; }
-  .watch-face-list-item.led-watch-3000-watch-face a {
-    background-color: #000000; }
+      padding: 1rem 1rem 1px 1rem;
+      text-align: center; }
+      .watch-face-list > .watch-face-list-item a:hover, .watch-face-list > .watch-face-list-item a:focus {
+        color: white;
+        opacity: 0.8; }
+      .watch-face-list > .watch-face-list-item a small {
+        display: block;
+        opacity: 0.75; }
+    .watch-face-list > .watch-face-list-item.pilot-watch-3000-watch-face a {
+      background-color: #002244; }
+    .watch-face-list > .watch-face-list-item.led-watch-3000-watch-face a {
+      background-color: #000000; }
 
 footer {
   background-color: black;
@@ -3208,4 +3250,7 @@ footer {
     footer a:hover, footer a:focus {
       color: yellow;
       opacity: 0.8; }
+
+a.display-block:hover img, a.display-block:focus img {
+  opacity: 0.8; }
 /*# sourceMappingURL=main.css.map */
