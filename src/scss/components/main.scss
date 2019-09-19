@@ -1,0 +1,134 @@
+$pilot-watch-3000-color: #002244;
+$led-watch-3000-color: #000000;
+
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+    small {
+        line-height: inherit;
+    }
+}
+
+section {
+    margin-bottom: 2rem;
+}
+
+.watch-face-banner-section {
+    padding-top: 2rem;
+    padding-bottom: 1rem;
+    background-color: black;
+    margin-bottom: 2rem;
+    small {
+        display: block;
+    }
+}
+@include breakpoint(medium) {
+    $gutters: 1rem;
+    .watch-face-banner-grid {
+        @include xy-grid();
+        @include xy-gutters(
+            $negative: true,
+        );
+    }
+    .watch-face-image-column {
+        @include xy-cell(
+            $size: 4 of 12,
+        );
+    }
+    .watch-face-text-column {
+        @include xy-cell(
+            $size: 8 of 12,
+        );
+    }
+}
+@include breakpoint(small down) {
+    .watch-face-banner-section {
+        text-align: center;
+    }
+    img.watch-face-image {
+        max-width: 256px;
+    }
+}
+
+html.pilot-watch-3000-watch-face {
+    .watch-face-banner-section {
+        background-color: $pilot-watch-3000-color;
+    }
+    h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+        color: lighten($pilot-watch-3000-color, 12.5%);
+    }
+}
+
+html.led-watch-3000-watch-face {
+    .watch-face-banner-section {
+        background-color: $led-watch-3000-color;
+    }
+    h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+        color: lighten($led-watch-3000-color, 12.5%);
+    }
+}
+
+html .light-text.light-text {
+    color: white;
+    h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+        color: inherit;
+        small {
+            color: inherit;
+            opacity: 0.5;
+        }
+    }
+}
+
+.watch-face-list {
+    @include xy-grid-layout(
+        $n: 2,
+        $selector: '*',
+    );
+    @include xy-gutters($negative: true);
+    @include breakpoint(medium only) {
+        > * {
+            @include xy-cell($size: 1/3);
+        }
+    }
+    @include breakpoint(large) {
+        > * {
+            @include xy-cell($size: 1/4);
+        }
+    }
+}
+.watch-face-list-item {
+    a {
+        font-family: 'Arial Black', 'Arial', 'Helvetica Neue', Helvetica, Roboto, sans-serif;
+        background-color: black;
+        color: white;
+        display: block;
+        padding: 1rem 1rem 1px 1rem;
+        text-align: center;
+        &:hover, &:focus {
+            color: white;
+            opacity: 0.8;
+        }
+        small {
+            display: block;
+            opacity: 0.75;
+        }
+    }
+    &.pilot-watch-3000-watch-face {
+        a { background-color: $pilot-watch-3000-color; }
+    }
+    &.led-watch-3000-watch-face {
+        a { background-color: $led-watch-3000-color; }
+    }
+    margin-bottom: 1rem;
+}
+
+footer {
+    background-color: black;
+    padding-top: 1rem;
+    color: white;
+    a {
+        color: yellow;
+        &:hover, &:focus {
+            color: yellow;
+            opacity: 0.8;
+        }
+    }
+}

@@ -1,0 +1,22 @@
+{
+  "name": "wear-os-watchfaces",
+  "version": "1.0.0",
+  "description": "Wear OS Watch Faces styles",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Darren Embry",
+  "license": "MIT",
+  "devDependencies": {
+    "cssnano": "^4.1.10",
+    "foundation-sites": "^6.5.3",
+    "foundation-sites-template": "^1.0.0",
+    "gulp-cssnano": "^2.1.3",
+    "gulp-load-plugins": "^1.6.0",
+    "gulp-postcss": "^8.0.0",
+    "gulp-rename": "^1.4.0",
+    "gulp-sass": "^4.0.2",
+    "postcss": "^7.0.17"
+  }
+}
