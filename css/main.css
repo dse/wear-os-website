@@ -3143,6 +3143,12 @@ html.pilot-watch-3000-watch-face .watch-face-banner-section {
 html.pilot-watch-3000-watch-face h1, html.pilot-watch-3000-watch-face h2, html.pilot-watch-3000-watch-face h3, html.pilot-watch-3000-watch-face h4, html.pilot-watch-3000-watch-face h5, html.pilot-watch-3000-watch-face h6, html.pilot-watch-3000-watch-face .h1, html.pilot-watch-3000-watch-face .h2, html.pilot-watch-3000-watch-face .h3, html.pilot-watch-3000-watch-face .h4, html.pilot-watch-3000-watch-face .h5, html.pilot-watch-3000-watch-face .h6 {
   color: #004284; }
 
+html.led-watch-3000-watch-face .watch-face-banner-section {
+  background-color: #000000; }
+
+html.led-watch-3000-watch-face h1, html.led-watch-3000-watch-face h2, html.led-watch-3000-watch-face h3, html.led-watch-3000-watch-face h4, html.led-watch-3000-watch-face h5, html.led-watch-3000-watch-face h6, html.led-watch-3000-watch-face .h1, html.led-watch-3000-watch-face .h2, html.led-watch-3000-watch-face .h3, html.led-watch-3000-watch-face .h4, html.led-watch-3000-watch-face .h5, html.led-watch-3000-watch-face .h6 {
+  color: #202020; }
+
 html .light-text.light-text {
   color: white; }
   html .light-text.light-text h1, html .light-text.light-text h2, html .light-text.light-text h3, html .light-text.light-text h4, html .light-text.light-text h5, html .light-text.light-text h6, html .light-text.light-text .h1, html .light-text.light-text .h2, html .light-text.light-text .h3, html .light-text.light-text .h4, html .light-text.light-text .h5, html .light-text.light-text .h6 {
@@ -3190,6 +3196,8 @@ html .light-text.light-text {
       opacity: 0.75; }
   .watch-face-list-item.pilot-watch-3000-watch-face a {
     background-color: #002244; }
+  .watch-face-list-item.led-watch-3000-watch-face a {
+    background-color: #000000; }
 
 footer {
   background-color: black;
