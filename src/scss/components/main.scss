@@ -77,47 +77,71 @@ html .light-text.light-text {
     }
 }
 
-.watch-face-list {
-    @include xy-grid-layout(
-        $n: 2,
-        $selector: '*',
-    );
-    @include xy-gutters($negative: true);
-    @include breakpoint(medium only) {
-        > * {
+.screenshot-list {
+    @include xy-grid();
+    @include xy-grid-layout($n: 2, $selector: '.screenshot-list-item');
+    @include flex-align($x: center);
+    @at-root .grid-x & {
+        @include xy-gutters($negative: true);
+    }
+    > .screenshot-list-item {
+        @include breakpoint(medium only) {
             @include xy-cell($size: 1/3);
         }
-    }
-    @include breakpoint(large) {
-        > * {
+        @include breakpoint(large up) {
             @include xy-cell($size: 1/4);
+        }
+        text-align: center;
+        > a {
+            display: block;
+            &:hover, &:focus {
+                img {
+                    opacity: 0.8;
+                    border-radius: 50%;
+                }
+            }
         }
     }
 }
-.watch-face-list-item {
-    a {
-        font-family: 'Arial Black', 'Arial', 'Helvetica Neue', Helvetica, Roboto, sans-serif;
-        background-color: black;
-        color: white;
-        display: block;
-        padding: 1rem 1rem 1px 1rem;
-        text-align: center;
-        &:hover, &:focus {
+
+.watch-face-list {
+    @include xy-grid();
+    @include xy-grid-layout($n: 2, $selector: '.watch-face-list-item');
+    @include flex-align($x: center);
+    @at-root .grid-x & {
+        @include xy-gutters($negative: true);
+    }
+    > .watch-face-list-item {
+        @include breakpoint(medium only) {
+            @include xy-cell($size: 1/3);
+        }
+        @include breakpoint(large up) {
+            @include xy-cell($size: 1/4);
+        }
+        a {
+            font-family: 'Arial Black', 'Arial', 'Helvetica Neue', Helvetica, Roboto, sans-serif;
+            background-color: black;
             color: white;
-            opacity: 0.8;
-        }
-        small {
             display: block;
-            opacity: 0.75;
+            padding: 1rem 1rem 1px 1rem;
+            text-align: center;
+            &:hover, &:focus {
+                color: white;
+                opacity: 0.8;
+            }
+            small {
+                display: block;
+                opacity: 0.75;
+            }
         }
+        &.pilot-watch-3000-watch-face {
+            a { background-color: $pilot-watch-3000-color; }
+        }
+        &.led-watch-3000-watch-face {
+            a { background-color: $led-watch-3000-color; }
+        }
+        margin-bottom: 1rem;
     }
-    &.pilot-watch-3000-watch-face {
-        a { background-color: $pilot-watch-3000-color; }
-    }
-    &.led-watch-3000-watch-face {
-        a { background-color: $led-watch-3000-color; }
-    }
-    margin-bottom: 1rem;
 }
 
 footer {
@@ -130,5 +154,11 @@ footer {
             color: yellow;
             opacity: 0.8;
         }
+    }
+}
+
+a.display-block:hover, a.display-block:focus {
+    img {
+        opacity: 0.8;
     }
 }
